@@ -4,7 +4,7 @@ The files in this repository were used to configure the network depicted below.
 
 https://github.com/no-compass/UofM-Project/tree/main/Diagrams
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yml file may be used to install only certain pieces of it, such as Filebeat.
 
   - _TODO: Enter the playbook file._
 
@@ -21,12 +21,14 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+Load balancing ensures that the application will be highly available, in addition to restricting Access to the network.
+The load balancer defends against denial-of-service (DDoS) attacks.
+Load balancers conduct health checks on servers to ensure they can handle requests.
+The Jump Box Limits attack surface allowong only one ip address access.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file systems and system metrics.
+- Filebeat monitors the log files or collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
+- Metricbeat takes the metrics and statistics that it collects and sends them to Elasticsearch or Logstash
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
