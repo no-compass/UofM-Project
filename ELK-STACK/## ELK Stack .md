@@ -1,8 +1,17 @@
 ## Automated ELK Stack Deployment
-
-The files in this repository were used to configure the network depicted below.
-
 ![NetworkMap](https://github.com/no-compass/UofM-Project/blob/main/Diagrams/Network%20Map%20ElkStack.png)
+
+
+
+This document contains the following details:
+- Description of the Topology
+- Access Policies
+- ELK Configuration
+  - Beats in Use
+  - Machines Being Monitored
+- How to Use the Ansible Build
+
+
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook (.yml) file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -12,13 +21,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 - [filebeat-playbook.yml](YML-Playbooks/filebeat-playbook.yml)
 - [metricbeat-playbook.yml](YML-Playbook) 
 
-This document contains the following details:
-- Description of the Topology
-- Access Policies
-- ELK Configuration
-  - Beats in Use
-  - Machines Being Monitored
-- How to Use the Ansible Build
+
 
 
 ### Description of the Topology
