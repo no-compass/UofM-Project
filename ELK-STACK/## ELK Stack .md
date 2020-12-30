@@ -115,13 +115,11 @@ Which file do you update to make Ansible run the playbook on a specific machine?
 
 How do I specify which machine to install the ELK server on versus which to install Filebeat on?
 
-In /etc/ansible/hosts you tell it where you want eachto be installed ElkServers or FileBeat
+In /etc/ansible/hosts you tell it where you want each to be installed ElkServers or FileBeat
 
-Which URL do you navigate to in order to check that the ELK server is running?
+Which URL do you navigate to in order to check that the ELK server is running? http://publicip(elkserver):5601
 
-http://publicip(elkserver):5601
-
-### Commands needed to run the Anisble Configuration for the Elk-Server are:
+### Commands for Anisble Configuration for the Elk-Server are:
 1. ssh sysadmin@JumpBox(PrivateIP)
 2. sudo docker container list -a - Locate the ansible container
 3. sudo docker start <name of container>(daisy_pain)
