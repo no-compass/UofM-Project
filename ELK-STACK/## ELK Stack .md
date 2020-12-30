@@ -6,11 +6,11 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook (.yml) file may be used to install only certain pieces of it, such as Filebeat.
 
-  The following ansible-playbooks are needed to create and install DVWA and the ELK-server
-  * [my-playbook.yml](YML-Playbooks/my-playbook.yml) - used to install DVWA servers
-  * [elk-playbook.yml](YML-Playbooks/elk-playbook.yml) - used to install ELK Server
-    * [filebeat-playbook.yml](YML-Playbooks/filebeat-playbook.yml) - Used to install and configure Filebeat on Elk Server and DVWA servers
-    * [metricbeat-playbook.yml](YML-Playbook) - Used to install and configure Metricbeat on Elk Server and DVWA servers
+  
+- [my-playbook.yml](YML-Playbooks/my-playbook.yml) 
+- [elk-playbook.yml](YML-Playbooks/elk-playbook.yml) 
+- [filebeat-playbook.yml](YML-Playbooks/filebeat-playbook.yml)
+- [metricbeat-playbook.yml](YML-Playbook) 
 
 This document contains the following details:
 - Description of the Topology
@@ -89,22 +89,21 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 -Filebeat: Filebeat detects changes to the filesystem. (Apache logs)
-Metricbeat: Metricbeat detects changes in system metrics CPU, RAM statistics and SSH login attempts, failed sudo escalations.
-Packetbeat: Packetbeat collects packets that pass through the NIC. 
+-Metricbeat: Metricbeat detects changes in system metrics CPU, RAM statistics and SSH login attempts, failed sudo escalations.
+-Packetbeat: Packetbeat collects packets that pass through the NIC. 
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 
 SSH into the control node and follow the steps below:
 - Copy the filebeat-config.yml and metricbeat-config.yml file to /etc/ansible/files.
-- Update the configuration files to include the Private IP of the ELK-Server to the ElasticSearch and Kibana Sections of the Configuration File
+- Update the playbook.yml to include the Private IP of the ELK-Server
 - Run the playbook, and navigate to ELK-Server-PublicIP:5601/app/kibana to check that the installation worked as expected.
 
 Which file is the playbook?
-The playbook files are:
-* [elk-playbook.yml](YML-Playbooks/elk-playbook.yml) - used to install ELK Server
-  * [filebeat-playbook.yml](YML-Playbooks/filebeat-playbook.yml) - Used to install and configure Filebeat on Elk Server and DVWA servers
-  * [metricbeat-playbook.yml](YML-Playbook) - Used to install and configure Metricbeat on Elk Server and DVWA servers
+-[elk-playbook.yml](YML-Playbooks/elk-playbook.yml) - used to install ELK Server  
+-[filebeat-playbook.yml](YML-Playbooks/filebeat-playbook.yml) - Used to install and configure Filebeat on Elk Server and DVWA servers
+-[metricbeat-playbook.yml](YML-Playbook) - Used to install and configure Metricbeat
 
 Where do you copy it?
 
@@ -123,7 +122,7 @@ Which URL do you navigate to in order to check that the ELK server is running?
 http://publicip(elkserver):5601
 
 ### Commands needed to run the Anisble Configuration for the Elk-Server are:
-1. ssh RedAdmin@JumpBox(PrivateIP)
+1. ssh sysadmin@JumpBox(PrivateIP)
 2. sudo docker container list -a - Locate the ansible container
 3. sudo docker start <name of container>(daisy_pain)
 4. sudo docker attach <name of container>(daisy_pain)
@@ -134,6 +133,5 @@ http://publicip(elkserver):5601
 9. Open a new browser on Personal Workstation, navigate to (ELK-Server-PublicIP:5601/app/kibana) - This will bring up Kibana Web Portal
 
 
-### References
-Filebeat: Lightweight Log Analysis &amp; Elasticsearch. (n.d.). Retrieved August 22, 2020, from https://www.elastic.co/beats/filebeat
-Metricbeat: Lightweight Shipper for Metrics. (n.d.). Retrieved August 22, 2020, from https://www.elastic.co/beats/metricbeat
+
+
